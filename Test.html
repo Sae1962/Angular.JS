@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test page</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<script src="lib/angular/angular.js"></script>
+		<script src="lib/angular/angular-sanitize.min.js"></script>	<!-- to parse HTML code safely! -->
+
+		<script src="js/controllers.js"></script>
+		<link href="css/main.css" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css">
+	</head>
+	<body ng-app="MyApp">
+		<div ng-controller="PostsCtrl">
+			<!-- START PAGE -->
+			<!-- Start page header -->
+			<header class="start">
+				<div class="header_top Group">
+					<div class="header_background ivmblue40">
+						<element><b>Head</b></element>
+					</div>
+				</div>
+			</header>
+	
+			<!-- Start page body -->
+
+			<div data-role="page" id="infoPoint">
+				<section class="contact_blog">
+					<div class="contact_group parent" id="instructionGroup">
+						<div class="org">
+							<div class="contact_group_txt" ng-click="instruction(this)">
+								<a href="#" class="link">Instruction</a>
+							</div>
+							<span class="contact_group_icon"></span>
+						</div>
+					</div>
+					<div id="instruction" style="display:none">
+						<ol>
+							<div>Fill out the form.</div>
+							<div>Send data using the email button.</div>
+						</ol>
+					</div>
+					<div class="contact_group parent" id="infoPointGroup">
+						<div class="org">
+							<div class="contact_group_txt" ng-click="switchOnOff(this);">
+								<a href="#" class="link">Tutorials</a>
+							</div>
+							<span class="contact_group_icon"></span>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+	</body>
+</html>
